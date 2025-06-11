@@ -30,13 +30,12 @@ s = pd.Series(['Physiscs, Chemistry', 'English'],
 students_scores = {'Alice': 'Physics',
                    'Jack': 'Chemistry',
                    'Molly': 'English'}
-# When I create the series object though I'll only ask for an index with three students, and
-# I'll exclude Jack
+# When I create the series object though I'll only ask for an index with three students, and exclude Jack
 s = pd.Series(students_scores, index=['Alice', 'Molly', 'Sam'])
 
 # ? DataFrame ------------------------------------------------------------------------------------------------------------------------------------------
 
-# Conceptually, a DataFrame is a two-dimensional Series object. It is a collection of Series objects that share the same indexes.
+# Conceptually, a DataFrame is a collection of Series objects that share the same indexes.
 record1 = pd.Series({'Name': 'Alice',
                      'Class': 'Physics',
                      'Score': 85})
@@ -46,10 +45,11 @@ record2 = pd.Series({'Name': 'Jack',
 record3 = pd.Series({'Name': 'Helen',
                      'Class': 'Biology',
                      'Score': 90})
-
 # A Dataframe has an index and multiple columns of content.
 df = pd.DataFrame([record1, record2, record3], index=[
-                  'school1', 'school2', 'school3'])
+                  'Student 1', 'Student 2', 'Student 3'])
+# The index can be thought of as a dictionary key, and the columns can be thought of as the values associated with that key.Each column can be accessed by its name, and 
+# the index can be used to access the rows.
 
 # An alternative method is to use a list of dictionaries, where each dictionary represents a row in the DataFrame.
 
@@ -66,4 +66,4 @@ df = pd.DataFrame(students, index=[
                   'school1', 'school2', 'school1'])
 
 # We can extract data using the .iloc and .loc attributes.
-print(df.loc['school1']['Name'])  # Alice])
+# print(df.loc['school1']['Name'])  # Alice])
