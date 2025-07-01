@@ -63,10 +63,10 @@ student_df = pd.DataFrame([
     {'Name': 'Sally', 'School': 'Engineering', 'Location': '512 Wilson Crescent'}
 ])
 
-# The merge function preserves both locations but sufix them with an _x for the left DataFrame and a _y for the right DataFrame
+# The merge function preserves both locations but sufix them with _x for the left DataFrame and  _y for the right DataFrame
 left_join = pd.merge(staff_df, student_df, how='inner', on='Name')
 
-# ? Meging on multiple columns: What of we
+# ? Meging on multiple columns: 
 staff_df = pd.DataFrame([
     {'First Name': 'Sally', 'Last Name': 'Brooks', 'Role': 'Course liasion'},
     {'First Name': 'James', 'Last Name': 'Wilde', 'Role': 'Grader'},
